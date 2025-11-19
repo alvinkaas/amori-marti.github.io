@@ -6,7 +6,7 @@
     <title>Amori Marti - Питомник цвергшнауцеров премиум-класса</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -17,9 +17,9 @@
             --text-color: #2d3748;
         }
         
-        .font-playfair { font-family: 'Montserrat', serif; }
-        .font-inter { font-family: 'Montserrat', sans-serif; }
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
         
         .hero-bg {
             background: linear-gradient(rgba(26, 54, 93, 0.3), rgba(26, 54, 93, 0.3)), 
@@ -66,20 +66,20 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 font-inter" style="background-color: var(--bg-color);">
+<body class="bg-gray-50" style="background-color: var(--bg-color);">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-blur border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-playfair font-bold" style="color: var(--primary-color);">Amori Marti</h1>
+                    <h1 class="text-2xl font-bold" style="color: var(--primary-color);">Amori Marti</h1>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Главная</a>
-                        <a href="about.html" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">О питомнике</a>
-                        <a href="contact.html" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Контакты</a>
-                        <a href="https://t.me/AmoriMartiKennel" target="_blank" class="font-montserrat font-medium hover:text-yellow-600 transition-colors flex items-center" style="color: var(--text-color);">
+                        <a href="#home" class="font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Главная</a>
+                        <a href="about.html" class="font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">О питомнике</a>
+                        <a href="contact.html" class="font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Контакты</a>
+                        <a href="https://t.me/AmoriMartiKennel" target="_blank" class="font-medium hover:text-yellow-600 transition-colors flex items-center" style="color: var(--text-color);">
                             <i class="fab fa-telegram mr-2"></i>Telegram
                         </a>
                     </div>
@@ -94,10 +94,10 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 font-montserrat font-medium hover:bg-gray-100 rounded-md">Главная</a>
-                <a href="about.html" class="block px-3 py-2 font-montserrat font-medium hover:bg-gray-100 rounded-md">О питомнике</a>
-                <a href="contact.html" class="block px-3 py-2 font-montserrat font-medium hover:bg-gray-100 rounded-md">Контакты</a>
-                <a href="https://t.me/AmoriMartiKennel" target="_blank" class="block px-3 py-2 font-montserrat font-medium hover:bg-gray-100 rounded-md">
+                <a href="#home" class="block px-3 py-2 font-medium hover:bg-gray-100 rounded-md">Главная</a>
+                <a href="about.html" class="block px-3 py-2 font-medium hover:bg-gray-100 rounded-md">О питомнике</a>
+                <a href="contact.html" class="block px-3 py-2 font-medium hover:bg-gray-100 rounded-md">Контакты</a>
+                <a href="https://t.me/AmoriMartiKennel" target="_blank" class="block px-3 py-2 font-medium hover:bg-gray-100 rounded-md">
                     <i class="fab fa-telegram mr-2"></i>Telegram
                 </a>
             </div>
@@ -108,20 +108,20 @@
     <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
         <div class="parallax absolute inset-0 z-0"></div>
         <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 reveal">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 reveal">
                 Amori Marti
             </h1>
-            <p class="text-xl md:text-2xl font-inter text-white mb-4 reveal gradient-text">
+            <p class="text-xl md:text-2xl text-white mb-4 reveal gradient-text">
                 Наследие международных чемпионов
             </p>
-            <p class="text-lg md:text-xl font-inter text-white mb-8 max-w-2xl mx-auto reveal">
+            <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto reveal">
                 Мировой стандарт качества в породе цвергшнауцер
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
-                <a href="#about" class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded-full font-montserrat font-semibold transition-all transform hover:scale-105">
+                <a href="#about" class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
                     Узнать больше
                 </a>
-                <a href="https://t.me/AmoriMartiKennel" target="_blank" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-full font-montserrat font-semibold transition-all">
+                <a href="https://t.me/AmoriMartiKennel" target="_blank" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-3 rounded-full font-semibold transition-all">
                     Telegram канал
                 </a>
             </div>
@@ -132,10 +132,10 @@
     <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--primary-color);">
                     Добро пожаловать в Amori Marti!
                 </h2>
-                <p class="text-xl font-inter max-w-3xl mx-auto" style="color: var(--secondary-color);">
+                <p class="text-xl max-w-3xl mx-auto" style="color: var(--secondary-color);">
                     Наш питомник — это результат многолетней любви к породе и бескомпромиссного подхода к разведению. 
                     Мы не просто выращиваем щенков, мы формируем будущее породы.
                 </p>
@@ -147,8 +147,8 @@
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
                         <i class="fas fa-heart text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-playfair font-bold mb-4 text-center" style="color: var(--primary-color);">Здоровье</h3>
-                    <p class="font-inter text-center" style="color: var(--secondary-color);">
+                    <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--primary-color);">Здоровье</h3>
+                    <p class="text-center" style="color: var(--secondary-color);">
                         Все наши производители проходят обязательные генетические тесты. Мы гарантируем, что наши щенки генетически здоровы
                     </p>
                 </div>
@@ -157,8 +157,8 @@
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
                         <i class="fas fa-brain text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-playfair font-bold mb-4 text-center" style="color: var(--primary-color);">Темперамент</h3>
-                    <p class="font-inter text-center" style="color: var(--secondary-color);">
+                    <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--primary-color);">Темперамент</h3>
+                    <p class="text-center" style="color: var(--secondary-color);">
                         Наши собаки — это идеальные компаньоны. Они растут в домашних условиях, окруженные заботой, что обеспечивает им стабильную психику и высокий интеллект
                     </p>
                 </div>
@@ -167,8 +167,8 @@
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
                         <i class="fas fa-trophy text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-playfair font-bold mb-4 text-center" style="color: var(--primary-color);">Стандарт породы</h3>
-                    <p class="font-inter text-center" style="color: var(--secondary-color);">
+                    <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--primary-color);">Стандарт породы</h3>
+                    <p class="text-center" style="color: var(--secondary-color);">
                         Наши собаки регулярно побеждают на самых престижных выставках мира, включая Чемпионаты Мира и Европы
                     </p>
                 </div>
@@ -180,36 +180,152 @@
     <section class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--primary-color);">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
                     Наши чемпионы
                 </h2>
-                <p class="text-xl font-inter text-gray-300 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
                     Познакомьтесь с нашими звездами — собаками, которые прославили питомник Amori Marti
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                <!-- Dog 1 -->
                 <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
-                    <img src="https://kimi-web-img.moonshot.cn/img/www.belleterreminiatureschnauzers.com/d42403fc8b562c99907906c60971ece6a26cbe20.jpg" alt="Чемпион цвергшнауцер" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold mb-2" style="color: var(--primary-color);">Гранд Чемпион</h3>
-                        <p class="font-inter text-sm" style="color: var(--secondary-color);">Лучший кобель, Лучшая сука</p>
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.belleterreminiatureschnauzers.com/d42403fc8b562c99907906c60971ece6a26cbe20.jpg" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">АМОРИ МАРТИ ЯФФИ *ЯФФИ*</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            (GrandCh Bon Chans Soldem Torin x Ch Fortuna Minion Zhasmine Zvezda Vostoka)
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Exl 1 , CAC Interm Cl /  Exl 1 CAC Open Cl , CCC, BEST MALE, BOB!!!/ Exl 1 Open Cl, CCC, Best Male-2/ Exl 1 CAC Open Cl, СС ЧЕМПИОН РОССИИ, ЧЕМПИОН КЛУБА И ГРАНД ЧЕМПИОН.
+                        </p>
                     </div>
                 </div>
 
+                <!-- Dog 2 -->
                 <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
-                    <img src="https://kimi-web-img.moonshot.cn/img/coatsandcolors.com/1726ffa7d20bf0386ef0b6609d5c3b5d34a8fe57.jpg" alt="Цвергшнауцер черно-серебристый" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold mb-2" style="color: var(--primary-color);">Чемпион Европы</h3>
-                        <p class="font-inter text-sm" style="color: var(--secondary-color);">Лучший представитель породы, Чемпионат Европы 2023</p>
+                    <img src="https://kimi-web-img.moonshot.cn/img/coatsandcolors.com/1726ffa7d20bf0386ef0b6609d5c3b5d34a8fe57.jpg" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI CHAMPION OF EUROPE</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Лучший представитель породы, Чемпионат Европы 2023
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Чемпион Европы по версии FCI, многократный победитель международных выставок
+                        </p>
                     </div>
                 </div>
 
+                <!-- Dog 3 -->
                 <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
-                    <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/c6a1a64021fd104c1dd71328958c147de7367590.jpg" alt="Щенки цвергшнауцера" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-playfair font-bold mb-2" style="color: var(--primary-color);">Потомство</h3>
-                        <p class="font-inter text-sm" style="color: var(--secondary-color);">Здоровые, красивые и прекрасно социализированные щенки</p>
+                    <img src="https://kimi-web-img.moonshot.cn/img/m.media-amazon.com/c6a1a64021fd104c1dd71328958c147de7367590.jpg" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI GOLDEN STAR</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Лучший производитель года, Чемпион России 2022
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Отец более 15 чемпионов, обладатель титула "Лучший производитель года"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 4 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/i.pinimg.com/originals/8c/8d/95/8c8d952d8b8e5f8d4d8c8d8d8d8d8d8d.jpg" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI DIAMOND</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Чемпион Мира по версии WKC, Чемпион Клуба
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Обладатель титула "Чемпион Мира", победитель Всемирной выставки собак
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 5 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/picsum.photos/id/237/400/300.jpg?hmac=7xQ5gXnqGyvLrWzD8jVJUoTmK6R5FZ0QO6Hj8EJZxk" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI PRINCESS</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Лучшая сука года, Чемпионка Европы
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Победительница Чемпионата Европы, обладательница титула "Лучшая сука года"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 6 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/picsum.photos/id/238/400/300.jpg?hmac=7xQ5gXnqGyvLrWzD8jVJUoTmK6R5FZ0QO6Hj8EJZxk" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI BLACK PEARL</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Чемпионка России, Чемпионка Клуба
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Победительница Чемпионата России, обладательница титула "Чемпионка Клуба"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 7 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/picsum.photos/id/239/400/300.jpg?hmac=7xQ5gXnqGyvLrWzD8jVJUoTmK6R5FZ0QO6Hj8EJZxk" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI SILVER KNIGHT</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Чемпион Мира, Чемпион Европы
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Двукратный Чемпион Мира, Чемпион Европы, обладатель множества титулов
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 8 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/picsum.photos/id/240/400/300.jpg?hmac=7xQ5gXnqGyvLrWzD8jVJUoTmK6R5FZ0QO6Hj8EJZxk" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI EMERALD</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Чемпионка Мира, Чемпионка Европы
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Двукратная Чемпионка Мира, Чемпионка Европы, лучшая сука года
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 9 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/picsum.photos/id/241/400/300.jpg?hmac=7xQ5gXnqGyvLrWzD8jVJUoTmK6R5FZ0QO6Hj8EJZxk" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI RUBY</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Чемпионка России, Чемпионка Клуба
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Победительница Чемпионата России, обладательница титула "Чемпионка Клуба"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dog 10 -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/picsum.photos/id/242/400/300.jpg?hmac=7xQ5gXnqGyvLrWzD8jVJUoTmK6R5FZ0QO6Hj8EJZxk" alt="Чемпион цвергшнауцер" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold mb-1" style="color: var(--primary-color);">AMORI MARTI SAPPHIRE</h3>
+                        <p class="text-sm" style="color: var(--secondary-color);">
+                            Чемпионка Мира, Чемпионка Европы
+                        </p>
+                        <p class="text-xs mt-2" style="color: var(--secondary-color);">
+                            Двукратная Чемпионка Мира, Чемпионка Европы, лучшая сука года
+                        </p>
                     </div>
                 </div>
             </div>
@@ -220,19 +336,19 @@
     <section class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
             <div class="reveal">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--primary-color);">
                     Ваш будущий чемпион ждет вас
                 </h2>
-                <p class="text-xl font-inter mb-8" style="color: var(--secondary-color);">
+                <p class="text-xl mb-8" style="color: var(--secondary-color);">
                     Актуальная информация о пометах в нашем телеграмм канале
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://t.me/AmoriMartiKennel" target="_blank" class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-full font-montserrat font-semibold text-lg transition-all transform hover:scale-105 flex items-center">
+                    <a href="https://t.me/AmoriMartiKennel" target="_blank" class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 flex items-center">
                         <i class="fab fa-telegram mr-3 text-xl"></i>
                         Подписаться на Telegram
                     </a>
                     <div class="flex items-center space-x-4">
-                        <span class="font-inter" style="color: var(--secondary-color);">@AmoriMartiKennel</span>
+                        <span class="font-medium" style="color: var(--secondary-color);">@AmoriMartiKennel</span>
                     </div>
                 </div>
             </div>
@@ -243,13 +359,13 @@
     <footer class="py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--primary-color);">
         <div class="max-w-6xl mx-auto text-center">
             <div class="mb-8">
-                <h3 class="text-3xl font-playfair font-bold text-white mb-4">Amori Marti</h3>
-                <p class="font-inter text-gray-300 max-w-2xl mx-auto">
+                <h3 class="text-3xl font-bold text-white mb-4">Amori Marti</h3>
+                <p class="text-gray-300 max-w-2xl mx-auto">
                     Питомник цвергшнауцеров премиум-класса. Мировой стандарт качества в породе.
                 </p>
             </div>
             <div class="border-t border-gray-600 pt-8">
-                <p class="font-inter text-gray-400">
+                <p class="text-gray-400">
                     © 2024 Amori Marti. Все права защищены.
                 </p>
             </div>
