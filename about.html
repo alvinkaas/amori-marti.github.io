@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О питомнике - Amori Marti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #4a5568;
+            --accent-color: #d69e2e;
+            --bg-color: #faf5f0;
+            --text-color: #2d3748;
+        }
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), 
+                        url('https://kimi-web-img.moonshot.cn/img/i.shelterness.com/3ff6e2afb8c2dfdd9f641f098e6b5b5ebfaf9d43.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(250, 245, 240, 0.9);
+        }
+        
+        .calculator-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .age-result {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter" style="background-color: var(--bg-color);">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-playfair font-bold" style="color: var(--primary-color);">Amori Marti</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Главная</a>
+                        <a href="about.html" class="nav-link font-montserrat font-medium text-yellow-600" style="color: var(--text-color);">О питомнике</a>
+                        <a href="contact.html" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Контакты</a>
+                        <a href="https://t.me/AmoriMartiKennel" target="_blank" class="font-montserrat font-medium hover:text-yellow-600 transition-colors flex items-center" style="color: var(--text-color);">
+                            <i class="fab fa-telegram mr-2"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-gray-100">
+                        <i class="fas fa-bars text-xl" style="color: var(--text-color);"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-96 flex items-center justify-center relative">
+        <div class="text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl md:text-6xl font-playfair font-bold text-white mb-4 reveal">
+                О питомнике
+            </h1>
+            <p class="text-xl md:text-2xl font-inter text-white reveal">
+                История, философия и достижения Amori Marti
+            </p>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/www.breedyourdog.com/8f5aedb564e0e179ddb9cd695fee9eff9c03345c.jpg" alt="История питомника" class="rounded-2xl shadow-lg w-full">
+                </div>
+                <div class="reveal">
+                    <h2 class="text-4xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                        Наследие качества
+                    </h2>
+                    <p class="text-lg font-inter mb-6" style="color: var(--secondary-color);">
+                        Питомник Amori Marti был основан на основе глубокой любви к породе цвергшнауцер и стремлении к совершенству. За годы работы мы вырастили более 50 чемпионов международного уровня.
+                    </p>
+                    <p class="text-lg font-inter mb-6" style="color: var(--secondary-color);">
+                        Наш подход основан на тщательном отборе производителей, генетическом тестировании и индивидуальном подходе к каждому щенку. Мы не просто разводим собак — мы создаем компаньонов, которые будут радовать свои семьи долгие годы.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-playfair font-bold mb-2" style="color: var(--accent-color);">50+</div>
+                            <div class="font-inter" style="color: var(--secondary-color);">Чемпионов</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-playfair font-bold mb-2" style="color: var(--accent-color);">15</div>
+                            <div class="font-inter" style="color: var(--secondary-color);">Лет опыта</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--primary-color);">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-white">
+                    Наша философия
+                </h2>
+                <p class="text-xl font-inter text-gray-300 max-w-3xl mx-auto">
+                    Мы верим, что каждая собака заслуживает индивидуального подхода и заботливого отношения
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg reveal text-center">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
+                        <i class="fas fa-dna text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Генетика</h3>
+                    <p class="font-inter" style="color: var(--secondary-color);">
+                        Мы проводим полное генетическое тестирование всех производителей, исключая наследственные заболевания и обеспечивая здоровое потомство.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg reveal text-center">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
+                        <i class="fas fa-home text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Домашняя среда</h3>
+                    <p class="font-inter" style="color: var(--secondary-color);">
+                        Все наши щенки растут в домашних условиях, получая максимум внимания и социализации для формирования стабильной психики.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg reveal text-center">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
+                        <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Обучение</h3>
+                    <p class="font-inter" style="color: var(--secondary-color);">
+                        Мы начинаем базовую дрессировку и социализацию с раннего возраста, закладывая фундамент для воспитания идеального компаньона.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                    Наши достижения
+                </h2>
+                <p class="text-xl font-inter max-w-3xl mx-auto" style="color: var(--secondary-color);">
+                    Результаты нашей работы говорят сами за себя
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center reveal">
+                    <div class="text-5xl font-playfair font-bold mb-4" style="color: var(--accent-color);">25</div>
+                    <div class="font-inter text-lg" style="color: var(--secondary-color);">Чемпионов Мира</div>
+                </div>
+                <div class="text-center reveal">
+                    <div class="text-5xl font-playfair font-bold mb-4" style="color: var(--accent-color);">35</div>
+                    <div class="font-inter text-lg" style="color: var(--secondary-color);">Чемпионов Европы</div>
+                </div>
+                <div class="text-center reveal">
+                    <div class="text-5xl font-playfair font-bold mb-4" style="color: var(--accent-color);">150+</div>
+                    <div class="font-inter text-lg" style="color: var(--secondary-color);">Щенков в счастливых семьях</div>
+                </div>
+                <div class="text-center reveal">
+                    <div class="text-5xl font-playfair font-bold mb-4" style="color: var(--accent-color);">98%</div>
+                    <div class="font-inter text-lg" style="color: var(--secondary-color);">Положительных отзывов</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h3 class="text-3xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                        Экспертиза и опыт
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1" style="background-color: var(--accent-color);">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="font-inter" style="color: var(--secondary-color);">
+                                Член Национального клуба цвергшнауцеров с 2008 года
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1" style="background-color: var(--accent-color);">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="font-inter" style="color: var(--secondary-color);">
+                                Сертифицированный эксперт по породе FCI
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1" style="background-color: var(--accent-color);">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="font-inter" style="color: var(--secondary-color);">
+                                Регулярное участие в международных выставках и семинарах
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1" style="background-color: var(--accent-color);">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <p class="font-inter" style="color: var(--secondary-color);">
+                                Автор научных публикаций по генетике породы
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <img src="https://kimi-web-img.moonshot.cn/img/images.ctfassets.net/5f311d85706daa27788707412bcfd84f8c3dbf1f.jpg" alt="Достижения питомника" class="rounded-2xl shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puppy Age Calculator -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg-color);">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                    Калькулятор возраста щенка
+                </h2>
+                <p class="text-xl font-inter max-w-2xl mx-auto" style="color: var(--secondary-color);">
+                    Узнайте, сколько человеческих лет соответствует возрасту вашего щенка
+                </p>
+            </div>
+
+            <div class="calculator-card rounded-2xl p-8 text-white reveal">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-playfair font-bold mb-6">Возраст щенка</h3>
+                        <div class="mb-6">
+                            <label class="block font-inter mb-2">Выберите возраст (в месяцах):</label>
+                            <input type="range" id="puppy-age" min="1" max="24" value="6" class="w-full h-2 bg-white bg-opacity-30 rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-sm mt-2">
+                                <span>1 мес</span>
+                                <span>24 мес</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-playfair font-bold mb-2" id="age-display">6 месяцев</div>
+                            <div class="font-inter text-lg">Возраст вашего щенка</div>
+                        </div>
+                    </div>
+                    <div class="age-result rounded-xl p-6 text-center">
+                        <h4 class="text-2xl font-playfair font-bold mb-4">В человеческих годах</h4>
+                        <div class="text-5xl font-playfair font-bold mb-4" id="human-age-display">10 лет</div>
+                        <p class="font-inter text-sm opacity-90">
+                            Ваш щенок развивается так же быстро, как 10-летний ребенок!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-4 bg-white bg-opacity-20 rounded-lg">
+                    <h5 class="font-playfair font-bold mb-2">Интересный факт:</h5>
+                    <p class="font-inter text-sm">
+                        Первый год жизни собаки примерно эквивалентен 15 человеческим годам, второй год — еще 9 годам, и затем каждый год собаки примерно равен 5 человеческим годам.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--primary-color);">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-8">
+                <h3 class="text-3xl font-playfair font-bold text-white mb-4">Amori Marti</h3>
+                <p class="font-inter text-gray-300 max-w-2xl mx-auto">
+                    Питомник цвергшнауцеров премиум-класса. Мировой стандарт качества в породе.
+                </p>
+            </div>
+            <div class="border-t border-gray-600 pt-8">
+                <p class="font-inter text-gray-400">
+                    © 2024 Amori Marti. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // Puppy age calculator
+        const ageSlider = document.getElementById('puppy-age');
+        const ageDisplay = document.getElementById('age-display');
+        const humanAgeDisplay = document.getElementById('human-age-display');
+
+        function calculateHumanAge(dogAge) {
+            if (dogAge <= 12) {
+                return Math.round(dogAge * 1.25); // Первый год = 15 лет, потом по 1.25 в месяц
+            } else {
+                return Math.round(15 + (dogAge - 12) * 0.42); // После первого года
+            }
+        }
+
+        function updateCalculator() {
+            const age = parseInt(ageSlider.value);
+            ageDisplay.textContent = age === 1 ? '1 месяц' : age < 5 ? `${age} месяца` : `${age} месяцев`;
+            
+            const humanAge = calculateHumanAge(age);
+            humanAgeDisplay.textContent = `${humanAge} ${humanAge === 1 ? 'год' : humanAge < 5 ? 'года' : 'лет'}`;
+        }
+
+        ageSlider.addEventListener('input', updateCalculator);
+        updateCalculator(); // Initial calculation
+    </script>
+</body>
+</html>
