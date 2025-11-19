@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Amori Marti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #4a5568;
+            --accent-color: #d69e2e;
+            --bg-color: #faf5f0;
+            --text-color: #2d3748;
+        }
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), 
+                        url('https://kimi-web-img.moonshot.cn/img/ak1.ostkcdn.com/1c379e2ad5a420a92b1d8fdd053ae2ef9e66dbfd.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(250, 245, 240, 0.9);
+        }
+        
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2d5a87 100%);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter" style="background-color: var(--bg-color);">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-playfair font-bold" style="color: var(--primary-color);">Amori Marti</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">Главная</a>
+                        <a href="about.html" class="nav-link font-montserrat font-medium hover:text-yellow-600 transition-colors" style="color: var(--text-color);">О питомнике</a>
+                        <a href="contact.html" class="nav-link font-montserrat font-medium text-yellow-600" style="color: var(--text-color);">Контакты</a>
+                        <a href="https://t.me/AmoriMartiKennel" target="_blank" class="font-montserrat font-medium hover:text-yellow-600 transition-colors flex items-center" style="color: var(--text-color);">
+                            <i class="fab fa-telegram mr-2"></i>Telegram
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md hover:bg-gray-100">
+                        <i class="fas fa-bars text-xl" style="color: var(--text-color);"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-96 flex items-center justify-center relative">
+        <div class="text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl md:text-6xl font-playfair font-bold text-white mb-4 reveal">
+                Контакты
+            </h1>
+            <p class="text-xl md:text-2xl font-inter text-white reveal">
+                Свяжитесь с нами для получения информации о щенках
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg reveal text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Телефон</h3>
+                    <p class="font-inter text-lg mb-2" style="color: var(--secondary-color);">+7 (926) 211-31-93</p>
+                    <p class="font-inter text-sm" style="color: var(--secondary-color);">Мария Подольская</p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg reveal text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Email</h3>
+                    <p class="font-inter text-lg" style="color: var(--secondary-color);">amorimarti@mail.ru</p>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg reveal text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto" style="background-color: var(--accent-color);">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Адрес</h3>
+                    <p class="font-inter text-lg" style="color: var(--secondary-color);">Россия, г. Москва</p>
+                    <p class="font-inter text-lg" style="color: var(--secondary-color);">ул. Богданова, 10, корп. 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--primary-color);">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-6 text-white">
+                    Напишите нам
+                </h2>
+                <p class="text-xl font-inter text-gray-300 max-w-2xl mx-auto">
+                    Оставьте заявку, и мы свяжемся с вами для консультации
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-lg reveal">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block font-inter font-medium mb-2" style="color: var(--text-color);">Имя *</label>
+                            <input type="text" id="name" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="Ваше имя">
+                        </div>
+                        <div>
+                            <label class="block font-inter font-medium mb-2" style="color: var(--text-color);">Телефон *</label>
+                            <input type="tel" id="phone" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="+7 (999) 123-45-67">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block font-inter font-medium mb-2" style="color: var(--text-color);">Email</label>
+                        <input type="email" id="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="your@email.com">
+                    </div>
+                    
+                    <div>
+                        <label class="block font-inter font-medium mb-2" style="color: var(--text-color);">Интересующий вопрос</label>
+                        <select id="subject" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500">
+                            <option value="">Выберите тему</option>
+                            <option value="puppies">Щенки цвергшнауцера</option>
+                            <option value="breeding">Вязка</option>
+                            <option value="consultation">Консультация</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block font-inter font-medium mb-2" style="color: var(--text-color);">Сообщение *</label>
+                        <textarea id="message" required rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500" placeholder="Расскажите о вашем запросе..."></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-full font-montserrat font-semibold text-lg transition-all transform hover:scale-105">
+                            Отправить заявку
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="reveal">
+                <h2 class="text-4xl font-playfair font-bold mb-6" style="color: var(--primary-color);">
+                    Мы в социальных сетях
+                </h2>
+                <p class="text-xl font-inter mb-12" style="color: var(--secondary-color);">
+                    Подписывайтесь на наши каналы для актуальной информации
+                </p>
+                
+                <div class="flex justify-center space-x-8">
+                    <a href="https://t.me/AmoriMartiKennel" target="_blank" class="social-icon w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl" style="background-color: var(--accent-color);">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:amorimarti@mail.ru" class="social-icon w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl" style="background-color: var(--accent-color);">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+79262113193" class="social-icon w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl" style="background-color: var(--accent-color);">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-8 p-6 bg-white rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Telegram канал</h3>
+                    <p class="font-inter mb-4" style="color: var(--secondary-color);">
+                        Актуальная информация о пометах, фото и видео щенков, советы по уходу
+                    </p>
+                    <a href="https://t.me/AmoriMartiKennel" target="_blank" class="inline-flex items-center bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-full font-montserrat font-semibold transition-all">
+                        <i class="fab fa-telegram mr-3 text-xl"></i>
+                        @AmoriMartiKennel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Hours -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg-color);">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl p-8 shadow-lg reveal">
+                <h2 class="text-3xl font-playfair font-bold mb-8 text-center" style="color: var(--primary-color);">
+                    Режим работы
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style="background-color: var(--accent-color);">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Прием звонков</h3>
+                        <div class="font-inter space-y-2" style="color: var(--secondary-color);">
+                            <p>Понедельник - Пятница: 9:00 - 20:00</p>
+                            <p>Суббота: 10:00 - 18:00</p>
+                            <p>Воскресенье: 10:00 - 16:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto" style="background-color: var(--accent-color);">
+                            <i class="fas fa-calendar text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-playfair font-bold mb-4" style="color: var(--primary-color);">Визиты в питомник</h3>
+                        <div class="font-inter space-y-2" style="color: var(--secondary-color);">
+                            <p>По предварительной записи</p>
+                            <p>Ежедневно: 10:00 - 18:00</p>
+                            <p class="text-sm">Запись обязательна!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 rounded-xl" style="background-color: #f7fafc;">
+                    <div class="flex items-center justify-center space-x-4">
+                        <i class="fas fa-info-circle text-2xl" style="color: var(--accent-color);"></i>
+                        <div class="font-inter text-center">
+                            <p class="font-semibold" style="color: var(--primary-color);">Важная информация</p>
+                            <p class="text-sm" style="color: var(--secondary-color);">Все щенки переезжают в новый дом полностью привитыми, с микрочипом и полным пакетом документов РКФ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8" style="background-color: var(--primary-color);">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="mb-8">
+                <h3 class="text-3xl font-playfair font-bold text-white mb-4">Amori Marti</h3>
+                <p class="font-inter text-gray-300 max-w-2xl mx-auto">
+                    Питомник цвергшнауцеров премиум-класса. Мировой стандарт качества в породе.
+                </p>
+            </div>
+            <div class="border-t border-gray-600 pt-8">
+                <p class="font-inter text-gray-400">
+                    © 2024 Amori Marti. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Show success message
+            alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Form validation
+        const inputs = document.querySelectorAll('.form-input');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.style.borderColor = '#ef4444';
+                } else {
+                    this.style.borderColor = '#d1d5db';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
